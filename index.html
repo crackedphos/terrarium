@@ -5,10 +5,15 @@
 	<meta charset="utf-8" /> <!-- specifies the character encoding for the HTML document, ensuring that text is displayed correctly across different browsers and devices. UTF-8 is a widely used encoding that supports a wide range of characters from various languages. -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- instructs Internet Explorer to use the latest rendering engine available, ensuring that the page is displayed correctly and takes advantage of modern web standards. This helps maintain compatibility with older versions of IE while promoting better performance and rendering. -->
 	<meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- sets the viewport properties for responsive web design, ensuring that the page scales correctly on different devices and screen sizes. The width=device-width property makes the page's width match the device's screen width, while initial-scale=1 sets the initial zoom level to 100%, providing a better user experience on mobile devices. -->
+    <link rel="stylesheet" href="./style.css" />
 </head>
     <body>
-        <div id="page">
-            <div id="left-container" class="container">
+        <main id="page">
+            <header>
+                <h1 style="color: red">My Terrarium</h1>
+            </header>
+
+            <aside id="left-container" class="container" aria-label="Left plant selection">
                 <div class="plant-holder">
                     <img class="plant" alt="Trailing string of pearls succulent vine" id="plant1" src="./images/plant1.png" />
                 </div>
@@ -30,8 +35,9 @@
                 <div class="plant-holder">
                     <img class="plant" alt="Bright green upright succulent with thick rounded petals" id="plant7" src="./images/plant7.png" />
                 </div>
-            </div>
-            <div id="right-container" class="container">
+            </aside>
+
+            <aside id="right-container" class="container" aria-label="Right plant selection">
                 <div class="plant-holder">
                     <img class="plant" alt="Tall columnar cactus stems topped with fuzzy orange flowers" id="plant8" src="./images/plant8.png" />
                 </div>
@@ -53,9 +59,9 @@
                 <div class="plant-holder">
                     <img class="plant" alt="Spherical round barrel cactus covered in soft white fuzz and spines" id="plant14" src="./images/plant14.png" />
                 </div>
-            </div>
+            </aside>
 
-            <div id="terrarium"> <!-- Creates a main terrarium container with a unique ID for styling -->
+            <section id="terrarium" aria-label="Virtual Terrarium Jar"> <!-- Creates a main terrarium container for styling -->
                 <div class="jar-top"></div> <!-- Represents the top part of the terrarium jar, which can be styled to look like glass or a lid -->
                 <div class="jar-walls"> <!-- Represents the walls of the terrarium jar, which can be styled to look like transparent glass -->
                     <div class="jar-glossy-long"></div> <!-- Represents a long glossy reflection effect on the jar walls, enhancing the glass appearance -->
@@ -63,7 +69,7 @@
                 </div>
                 <div class="dirt"></div>
                 <div class="jar-bottom"></div>
-            </div>
-        </div>        
+            </section>
+        </main>        
     </body>
 </html>
