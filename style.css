@@ -1,0 +1,124 @@
+/* Main heading styling */
+h1 {
+  text-align: center; /* Centers the heading text horizontally */
+}
+
+/* Base page styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets a clean, modern sans-serif typeface across the entire page */
+}
+
+/* Sidebar containers holding the plant selections */
+.container {
+  background-color: #f5f5f5; /* Light gray backdrop to visually separate the sidebars from the terrarium area */
+  width: 15%; /* Allocates 15% of the screen width to each sidebar */
+  top: 0; /* Aligns container flush with the top edge of the viewport */
+  position: absolute; /* Takes containers out of normal document flow for exact sidebar placement */
+  height: 100vh; /* Stretches the container to fill 100% of the viewport height */
+  padding: 1rem; /* Adds inner spacing around the plant holders */
+  box-sizing: border-box; /* Includes padding in the 15% width and 100vh height to avoid unwanted scrollbars */
+}
+
+/* Left sidebar positioning */
+#left-container {
+  left: 0; /* Pins the left container against the left edge of the screen */
+}
+
+/* Right sidebar positioning */
+#right-container {
+  right: 0; /* Pins the right container against the right edge of the screen */
+}
+
+/* Individual slots that hold each plant in the sidebars */
+.plant-holder {
+  position: relative; /* Acts as a positioning reference anchor for the absolute plant image inside */
+  height: 13%; /* Distributes vertical height so 7 plant holders fit evenly down the column */
+  left: -0.6rem; /* Shifts plant holder slightly left for better visual centering */
+}
+
+/* Plant images (draggable items) */
+.plant {
+  position: absolute; /* Enables free positioning and dragging over the terrarium */
+  max-width: 150%; /* Scales plant image larger than its slot while maintaining aspect ratio */
+  max-height: 150%; /* Limits maximum height to prevent oversized plant images */
+  z-index: 2; /* Keeps plants in front of the jar walls and dirt so they stay visible and draggable */
+  transition: transform 0.3s ease; /* Smoothly animates size changes over 0.3s when hovered */
+}
+
+/* Interactive hover feedback for plants */
+.plant:hover {
+  transform: scale(1.05); /* Slightly enlarges the plant by 5% on hover to indicate it can be interacted with */
+}
+
+/* Main body/walls of the glass terrarium jar */
+.jar-walls {
+  height: 80%; /* Takes up 80% of the screen height as the central container */
+  width: 60%; /* Spans 60% of screen width */
+  background: #d1e1df; /* Soft blue-green tint representing transparent glass */
+  border-radius: 1rem; /* Softens and curves all four corners of the glass jar */
+  position: absolute; /* Positions jar freely on the screen */
+  bottom: 0.5%; /* Sits slightly above the bottom edge of the viewport */
+  left: 20%; /* Horizontally centers the 60%-wide jar (20% left margin + 60% width + 20% right margin) */
+  opacity: 0.5; /* Makes the jar semi-transparent so plants placed inside remain visible */
+  z-index: 1; /* Sits behind the plants (z-index: 2) but above background elements */
+  box-shadow: inset 0 0 2rem rgba(0, 0, 0, 0.1); /* Adds an inner shadow to simulate depth and curved glass edges */
+}
+
+.jar-glossy-long,
+.jar-glossy-short {
+  position: absolute; /* Allows precise placement of the glossy highlight on the jar */
+  left: 2%; /* Aligns the left edge of the glossy highlight with the left edge of the jar walls */
+  width: 3%; /* Spans most of the jar width to create a realistic highlight effect */
+  border-radius: 50%; /* Rounds the highlight into an oval shape to mimic light reflection */
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white to simulate a glossy reflection on the glass */
+  border-radius: 2rem;
+
+}
+
+.jar-glossy-long {
+    height: 60%; /* Vertical height of the glossy highlight */
+    bottom: 3%; /* Positions the glossy highlight slightly above the bottom of the jar walls */
+}
+
+.jar-glossy-short {
+    height: 10%; /* Vertical height of the glossy highlight */
+    bottom: 65%; /* Positions the glossy highlight slightly above the bottom of the jar walls */
+}
+
+/* Upper neck/rim of the terrarium jar */
+.jar-top {
+  width: 50%; /* Narrower width than the walls (50% vs 60%) to look like a jar neck */
+  height: 5%; /* Vertical height for the neck rim */
+  background: #d1e1df; /* Matches the glass tint of the jar walls */
+  position: absolute; /* Absolute positioning relative to the page */
+  bottom: 80.5%; /* Sits directly on top of the jar walls (0.5% bottom + 80% height = 80.5%) */
+  left: 25%; /* Horizontally centers the 50%-wide neck (25% + 50% + 25%) */
+  opacity: 0.7; /* Slightly higher opacity to simulate a thicker glass rim */
+  z-index: 1; /* Keeps the rim on the same stacking layer as the jar walls */
+  border-radius: 0.5rem 0.5rem 0 0; /* Rounds only the top-left and top-right corners of the rim */
+}
+
+/* Base/bottom rim of the terrarium jar */
+.jar-bottom {
+  width: 50%; /* Narrower base (50%) matching the top neck proportions */
+  height: 1%; /* Thin base line at the bottom of the jar */
+  background: #d1e1df; /* Matches the glass color */
+  position: absolute; /* Enables absolute placement at the bottom edge */
+  bottom: 0; /* Anchors flush to the very bottom of the screen */
+  left: 25%; /* Horizontally centers the 50%-wide base */
+  opacity: 0.7; /* Higher opacity to simulate a thicker glass base */
+  border-radius: 0 0 0.5rem 0.5rem; /* Rounds only the bottom-left and bottom-right corners */
+}
+
+/* Soil layer at the bottom of the terrarium */
+.dirt {
+  width: 60%; /* Matches the full 60% width of the jar walls */
+  height: 5%; /* Height of the soil bed */
+  background: #3a241d; /* Rich dark brown color representing terrarium soil */
+  position: absolute; /* Positions soil inside the lower portion of the jar */
+  border-radius: 0 0 1rem 1rem; /* Curves bottom corners to match the curvature of the jar walls */
+  bottom: 1%; /* Sits just above the jar bottom, inside the jar walls */
+  left: 20%; /* Aligns with the left edge of the jar walls */
+  opacity: 0.7; /* Slightly translucent so it blends naturally into the glass jar */
+  z-index: -1; /* Placed behind jar elements and plants */
+}
