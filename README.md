@@ -31,6 +31,10 @@ terrarium/
 ├── script.js        # Interactive functionality
 └── README.md        # Project documentation
 ```
+## Preview
+![Virtual Terrarium Preview](images/terrarium-preview-1.png)
+![Virtual Terrarium Preview](images/terrarium-preview-2.png)
+
 
 ## How to Run Locally
 
