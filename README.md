@@ -1,44 +1,38 @@
 # Virtual Terrarium
 
-## About the Project
+A simple interactive virtual terrarium built with **HTML, CSS, and JavaScript**. The project recreates a glass terrarium containing different plants, allowing users to arrange the plants by dragging them around the page.
 
-This project is about creating a virtual terrarium using HTML, CSS and JavaScript. It displays different plants around a glass jar, creating a digital environment where plants can be placed inside the terrarium.
+## Preview
 
-The project is part of my journey into web development and helps me practise the basics of building and designing websites.
+
+## Features
+
+- **Interactive plants:** Drag and reposition plants using pointer interactions.
+- **Terrarium design:** A glass jar with soil, reflections, and decorative styling.
+- **Plant collection:** Includes 14 different plant images.
+- **Visual effects:** CSS hover effects and styling enhance the appearance.
+- **Interactive functionality:** Plant dragging works through pointer events.
 
 ## Technologies Used
 
-- HTML5 – Used to structure the webpage.
-- CSS3 – Used to style the terrarium and arrange its elements.
-- JavaScript – Will be used to add interactive features.
+- **HTML5** – Structures the terrarium and its elements.
+- **CSS3** – Handles layout, positioning, styling, and visual effects.
+- **JavaScript** – Adds interactive plant-dragging functionality.
+- **Git & GitHub** – Used for version control and project management.
 
 ## Project Structure
 
 ```text
 terrarium/
 │
-├── index.html
-├── styles.css
-├── script.js
-└── images/
-    ├── plant1.png
-    ├── plant2.png
-    └── ...
+├── images/          # Plant images and visual assets
+├── index.html       # Main HTML page
+├── style.css        # Styling and layout
+├── script.js        # Interactive functionality
+└── README.md        # Project documentation
 ```
 
-## What I Am Learning
-
-Through this project, I am learning how to:
-
-- Structure a webpage using HTML.
-- Work with HTML elements, classes and IDs.
-- Apply CSS styling and positioning.
-- Understand how HTML, CSS and JavaScript work together.
-- Use Git and GitHub to manage project changes.
-
-## Getting Started
-
-To run the project locally:
+## How to Run Locally
 
 1. Clone the repository:
 
@@ -46,15 +40,92 @@ To run the project locally:
    git clone https://github.com/crackedphos/terrarium.git
    ```
 
-2. Open the project folder.
+2. Open the project folder:
+
+   ```bash
+   cd terrarium
+   ```
+
 3. Open `index.html` in your web browser.
 
-## Project Status
+No additional dependencies or installation steps are required.
 
-The project is currently under development. I have started with the HTML structure and will continue working on the styling and interactive features.
+## What I Learned
 
-## 
+Working on this project helped me develop a better understanding of how HTML, CSS, and JavaScript work together to create an interactive web application.
 
-Mpho
+### 1. HTML Structure and Organisation
 
-GitHub: [@crackedphos](https://github.com/crackedphos)
+I learned how to structure a web page using HTML5 and organise different elements into meaningful sections. This included:
+
+- Creating and organising page elements using HTML tags.
+- Using classes and IDs to identify and target specific elements.
+- Linking external CSS and JavaScript files to an HTML document.
+- Organising images and other assets within a project directory.
+
+### 2. CSS Styling and Layout
+
+I gained practical experience using CSS to control the appearance and positioning of elements on a web page. This included:
+
+- Applying colours, backgrounds, borders, and other visual properties.
+- Using positioning techniques to arrange plants around the terrarium.
+- Styling the glass jar to create reflections, transparency, and a more realistic appearance.
+- Using hover effects to make elements respond visually to user interaction.
+- Understanding how different CSS properties work together to create a consistent design.
+
+### 3. JavaScript and DOM Manipulation
+
+This project introduced me to using JavaScript to make web pages interactive rather than purely static. I learned how to:
+
+- Select HTML elements using JavaScript.
+- Attach event listeners to respond to user actions.
+- Use pointer events to detect when a user interacts with an element.
+- Update element positions dynamically based on pointer movement.
+- Use functions to organise and reuse code instead of repeating the same logic.
+
+### 4. Interactive Drag-and-Drop Functionality
+
+One of the main learning experiences was implementing the functionality that allows users to move plants around the terrarium.
+
+Through this, I gained experience with:
+
+- Detecting when a user presses or clicks on a plant.
+- Tracking pointer movement while an element is being dragged.
+- Updating an element's position based on the pointer's coordinates.
+- Detecting when the user releases the pointer to finish dragging.
+- Applying the same functionality to multiple plant elements.
+
+This helped me understand how JavaScript can respond to user input and manipulate elements on a web page in real time.
+
+### 5. Combining Frontend Technologies
+
+I developed a better understanding of how HTML, CSS, and JavaScript work together:
+
+- HTML provides the structure and content.
+- CSS controls the appearance and layout.
+- JavaScript handles interaction and behaviour.
+
+The project helped me understand how these three technologies complement one another when building a functional frontend application.
+
+### 6. Version Control and Project Management
+
+I also gained experience working with Git and GitHub to manage my project. This included:
+
+- Creating and maintaining a GitHub repository.
+- Tracking changes made to project files.
+- Using commits to record development progress.
+- Organising project files to make the codebase easier to understand and maintain.
+- Writing a README to document the project and explain how others can run it.
+
+
+## Future Improvements
+
+- Improve the layout for smaller screens and mobile devices.
+- Add more plant varieties and customization options.
+- Allow users to reset the terrarium to its original arrangement.
+- Add functionality to save plant arrangements.
+- Improve accessibility and keyboard interaction.
+
+---
+
+**Developed by [Mpho](https://github.com/crackedphos)**
